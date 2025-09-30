@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | 3-column preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --clr-primary-Bright-orange:#e38826;
+    --clr-primary-Dark-cyan:#006970;
+    --clr-primary-Very-dark-cyan:#004241;
+
+    --clr-neutral-Transparent-White-paragraphs:#ffffffbf;
+    --clr-neutral-Very-light-grey-bg-h:#f2f2f2;
+
+    --ff-body:'Lexend Deca', sans-serif;
+    --ff-heading:'Big Shoulders Display', sans-serif;
+
+    --fs-body: .95rem;
+    --fs-heading: 3rem;
+
+    --fw-400: 400;
+    --fw-700: 700;
+
+}
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    display: block;
+    max-width: 100%;
+}
+h1{
+    line-height: 1.1;
+    font-family: var(--ff-heading);
+}
+body{
+    font-family: var(--ff-body);
+    font-weight: var(--fw-400);
+    font-size: var(--fs-body);
+    color: var(--clr-neutral-Transparent-White-paragraphs);
+    line-height: 1.6;
+     
+}
+
+.title{
+    font-size: var(--fs-heading);
+    font-weight: var(--fw-700);
+    color: var(--clr-neutral-Very-light-grey-bg-h);
+    text-transform: uppercase;
+}
+.wrapper{
+    
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width:65em;
+    border-radius: .5rem;
+    overflow-y: hidden;
+    
+}
+.card-container > *{
+    flex-basis: 100%;
+    flex:1 0 18rem;
+     
+}
+.card-container > *:nth-child(1) {
+    background-color: var(--clr-primary-Bright-orange);
+
+}
+.card-container > *:nth-child(3) {
+    background-color: var(--clr-primary-Very-dark-cyan);
+
+}
+.card-container > *:nth-child(2){
+    background-color: var(--clr-primary-Dark-cyan);
+}
+.card{
+    padding: 3.5rem;
+    background-color: var(--clr-primary-Bright-orange);
+    text-align:center ;
+   
+    
+}
+.card * + *{
+    margin-top: 2rem;
+
+}
+.card-button{
+    font-style: inherit;
+    color: var(--clr-primary-Dark-cyan);
+    background: var(--clr-neutral-Very-light-grey-bg-h);
+    padding: .6rem 2rem ;
+    border-radius: 999px;
+    border:none;
+    transition:background .3s ease;
+
+
+}
+.card-button:hover{
+    color:var(--clr-neutral-Very-light-grey-bg-h);
+    border: 2px solid var(--clr-neutral-Very-light-grey-bg-h);
+    background: transparent;
+    cursor: pointer;
+
+}
+.card{
+     justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    
+
+}
+    </style>
+</head>
+<body>
+  <center>
+
+  <div class="wrapper">
+    <div class="card-container">
+
+      <div class="card">
+        <img src="./images/icon-sedans.svg" alt="" aria-hidden="true">
+        <h1 class="title">Sedans</h1>
+        <p class="desc">Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
+  or on your next road trip.</p>
+        <button class="card-button">Learn More</button>
+      </div>
+
+      <div class="card">
+        <img src="./images/icon-suvs.svg" alt="" aria-hidden="true">
+        <h1 class="title">SUVs</h1>
+        <p class="desc">Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
+  and off-road adventures.</p>
+        <button class="card-button">Learn More</button>
+      </div>
+
+      <div class="card">
+        <img src="./images/icon-luxury.svg" alt="" aria-hidden="true">
+        <h1 class="title">Luxury</h1>
+        <p class="desc">Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
+  rental and arrive in style.</p>
+        <button class="card-button">Learn More</button>
+      </div>
+
+    </div>
+  </div>
+  </center>
+  
+</body>
+</html>
